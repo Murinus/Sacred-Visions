@@ -1,0 +1,1413 @@
+// * {
+//     font-family: Arial, Helvetica, sans-serif;
+// }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+;
+
+body {
+    background-image: url(/src/imgs/backgroundart.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-color: rgb(0, 0, 0);
+}
+
+;
+
+
+
+//HOME PAGE START
+// MAIN-CONTAINER GRID
+#main-container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto;
+    // border: red solid 2px;
+    grid-template-areas:
+        '. navbar navbar navbar .'
+        '. logo logo logo .'
+        '. music music music .'
+        '. overlay overlay overlay .';
+}
+
+;
+
+// Main-Container LOGO / OFFICIAL / NAVBAR / MUSIC
+
+.music {
+    grid-area: music;
+}
+
+.logo {
+    grid-area: logo;
+    width: 100%;
+    align-content: center;
+    // border: red solid 2px;
+}
+
+;
+
+
+
+#navbar {
+    grid-area: navbar;
+    // border: red solid 2px;
+    padding: 10px;
+    text-align: center;
+}
+
+;
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: .5em;
+}
+
+;
+
+#navbar ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+;
+
+#navbar li {
+    display: inline;
+}
+
+;
+
+
+
+#navbar a:hover {
+    color: rgb(0, 107, 139);
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+
+.current {
+    border-bottom: rgb(0, 107, 139) 2px solid;
+}
+
+;
+
+
+// OVERLAY GRID
+#overlay {
+    background-color: rgba(0, 107, 139, 0.438);
+    // border: rgb(131, 130, 130) solid 2px;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-area: overlay;
+    grid-template-columns: 2% 32% 32% 32% 2%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        '. socialmedia socialmedia socialmedia .'
+        '. bandpic bandpic bandpic .'
+        '. cdcover albumtext albumtext .'
+        '. navbar2 navbar2 navbar2 .'
+        '. footer footer footer .';
+}
+
+;
+
+// Overlay SOCIALMEDIA / BANDPIC / CDCOVER / ALBUMTEXT / FOOTER
+.socialmedia {
+    // border: red solid 2px;
+    grid-area: socialmedia;
+    text-align: center;
+    display: inline;
+    padding: 20px;
+}
+
+;
+
+.socialmedia a {
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+}
+
+;
+
+.socialmedia a:hover {
+    color: purple;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+
+.bandpic {
+    // border: rgb(131, 130, 130) solid 2px;
+    grid-area: bandpic;
+    width: 100%;
+}
+
+;
+
+.cdcover {
+    // border: rgb(131, 130, 130) solid 2px;
+    grid-area: cdcover;
+    width: 100%;
+}
+
+;
+
+.albumtext {
+    // border: red solid 2px;
+    grid-area: albumtext;
+    padding-left: 25px;
+    background-color: rgba(0, 107, 139, 0.438);
+    color: white;
+}
+
+;
+
+.button {
+    padding: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+;
+
+.button:hover {
+    background-color: rgb(0, 107, 139);
+    color: white;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+
+.streaming li {
+    list-style-type: none;
+    padding: 2px;
+}
+
+;
+
+#navbar2 {
+    grid-area: navbar2;
+    // border: red solid 2px;
+    padding: 10px;
+    text-align: center;
+}
+
+;
+
+#navbar2 a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: .5em;
+}
+
+;
+
+#navbar2 ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+;
+
+#navbar2 li {
+    display: inline;
+}
+
+;
+
+#navbar2 a:hover {
+    color: rgb(0, 107, 139);
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+
+#navbar a:active {
+    background-color: rgb(0, 107, 139);
+    color: white;
+}
+
+.footer {
+    // border: red solid 2px;
+    grid-area: footer;
+}
+
+;
+
+.footer p {
+    text-align: center;
+    color: darkgrey;
+}
+
+;
+// HOME PAGE END/////////////////////////////////
+
+//BAND PAGE START
+
+#main-container2 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto auto;
+    // border: red solid 2px;
+    grid-template-areas:
+        '. navbar navbar navbar .'
+        '. bandheading bandheading bandheading .'
+        '. bandpagepic bandpagepic bandpagepic .'
+        '. overlay2 overlay2 overlay2 .';
+}
+
+;
+
+.bandheading {
+    background-color: rgba(0, 107, 139, 0.438);
+    grid-area: bandheading;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 3px;
+}
+
+;
+
+.logo2 {
+    grid-area: logo2;
+    width: 100%;
+    align-content: center;
+}
+
+;
+
+.socialmedia2 {
+    // border: red solid 2px;
+    grid-area: socialmedia2;
+    text-align: center;
+    display: inline;
+    padding: 20px;
+}
+
+;
+
+.socialmedia2 a {
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+}
+
+;
+
+.socialmedia2 a:hover {
+    color: purple;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+
+.bandpagepic {
+    grid-area: bandpagepic;
+    width: 100%
+}
+
+;
+
+.bandinfo {
+    grid-area: bandinfo;
+    background-color: rgba(0, 0, 0, 0.445);
+    color: white;
+    padding: 20px;
+}
+
+;
+
+.membersinfo {
+    grid-area: membersinfo;
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+;
+
+.member1 {
+    grid-area: member1;
+    width: 100%;
+    padding-top: 5px;
+}
+
+;
+
+.member1info {
+    grid-area: member1info;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+;
+
+.member2 {
+    grid-area: member2;
+    width: 100%;
+    padding-top: 5px;
+}
+
+;
+
+.member2info {
+    grid-area: member2info;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+;
+
+.member3 {
+    grid-area: member3;
+    width: 100%;
+    padding-top: 5px;
+}
+
+;
+
+.member3info {
+    grid-area: member3info;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+;
+
+.member4 {
+    grid-area: member4;
+    width: 100%;
+    padding-top: 5px;
+}
+
+;
+
+.member4info {
+    grid-area: member4info;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+;
+
+#overlay2 {
+    background-color: rgba(0, 107, 139, 0.438);
+    // border: rgb(131, 130, 130) solid 2px;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-area: overlay2;
+    grid-template-columns: 2% 32% 32% 32% 2%;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+        '. socialmedia2 socialmedia2 socialmedia2 .'
+        '. bandinfo bandinfo membersinfo .'
+        '. member1 member1 member1info .'
+        '. member2 member2 member2info .'
+        '. member3 member3 member3info .'
+        '. member4 member4 member4info .'
+        '. navbar2 navbar2 navbar2 .'
+        '. footer footer footer .';
+}
+
+;
+
+
+//BAND PAGE END ///////////////////////////////
+
+// TOUR PAGE STARTS //////////////////////////
+#main-container3 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto;
+    // border: red solid 2px;
+    grid-template-areas:
+        '. navbar navbar navbar .'
+        '. tourheading tourheading tourheading .'
+        '. overlay3 overlay3 overlay3 .';
+}
+
+;
+
+.tourheading {
+    background-color: rgba(0, 107, 139, 0.438);
+    border-bottom: white 2px solid;
+    grid-area: tourheading;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 3px;
+}
+
+;
+
+#overlay3 {
+    background-color: rgba(0, 107, 139, 0.438);
+    // border: rgb(131, 130, 130) solid 2px;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-area: overlay3;
+    grid-template-columns: 2% 32% 32% 32% 2%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        '. socialmedia3 socialmedia3 socialmedia3 .'
+        '. tourdates tourdates tourdates .'
+        '. navbar2 navbar2 navbar2  .'
+        '. footer footer footer .';
+}
+
+;
+
+.socialmedia3 {
+    // border: red solid 2px;
+    grid-area: socialmedia3;
+    text-align: center;
+    display: inline;
+    padding: 20px;
+}
+
+;
+
+.socialmedia3 a {
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+}
+
+;
+
+.socialmedia3 a:hover {
+    color: purple;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+
+.tourdates {
+    grid-area: tourdates;
+    color: white;
+    padding: 10px;
+}
+
+;
+
+.thead {
+    font-size: 1.5em;
+    border: white 1px solid;
+}
+
+;
+
+.tinfo1,
+.tinfo2,
+.tinfo3,
+.tinfo4,
+.tinfo5,
+.tinfo6,
+.tinfo7,
+.tinfo8,
+.tinfo9,
+.tinfo10,
+.tinfo11,
+.tinfo12,
+.tinfo13,
+.tinfo14 {
+    text-align: center;
+}
+
+;
+
+.tinfo1,
+.tinfo3,
+.tinfo5,
+.tinfo7,
+.tinfo9,
+.tinfo11,
+.tinfo13 {
+    background-color: darkgrey;
+    color: black;
+}
+
+;
+
+.tinfo14 {
+    border-bottom: white solid 1px;
+}
+
+// TOUR PAGE ENDS //////////////////////////// 
+
+// VIDEOS PAGE START //
+#main-container4 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto;
+    // border: red solid 2px;
+    grid-template-areas:
+        '. navbar navbar navbar .'
+        '. vheader vheader vheader .'
+        '. overlay4 overlay4 overlay4 .';
+}
+
+;
+
+.vheader {
+    background-color: rgba(0, 107, 139, 0.438);
+    grid-area: vheader;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 3px;
+}
+
+;
+
+#overlay4 {
+    background-color: rgba(0, 107, 139, 0.438);
+    // border: rgb(131, 130, 130) solid 2px;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-area: overlay4;
+    grid-template-columns: 15% 20% 30% 20% 15%;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        'socialmedia4 socialmedia4 socialmedia4 socialmedia4 socialmedia4'
+        '. video1 video1 video1  .'
+        '. video2 video2 video2  .'
+        '. video3 video3 video3  .'
+        'navbar2 navbar2 navbar2 navbar2 navbar2'
+        'footer footer footer footer footer';
+}
+
+;
+
+.video1 {
+    grid-area: video1;
+    width: 100%;
+}
+
+;
+
+.video2 {
+    grid-area: video2;
+    width: 100%;
+}
+
+;
+
+.video3 {
+    grid-area: video3;
+    width: 100%;
+}
+
+;
+
+.socialmedia4 {
+    // border: red solid 2px;
+    grid-area: socialmedia4;
+    text-align: center;
+    display: inline;
+    padding: 20px;
+}
+
+;
+
+.socialmedia4 a {
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+}
+
+;
+
+.socialmedia4 a:hover {
+    color: purple;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+;
+// VIDEOS PAGE ENDS //
+
+//MEDIA QUERIES //////////////////
+//MOST COMMON: 600px, 900px, 1200px, 1800px //////////////// 
+// BREAKPOINTS: ///// 
+// small: 24em //// 
+// small2: 29.75em //// 
+// small3: 39.8em //// 
+// med: 46.8em //// 
+// med2: 48em //// 
+// large: 50em //// 
+// large2: 54.5em //// 
+// xl: 60em //// 
+// xl2: 67em //// 
+
+// $bp-small: 24em; 
+// $bp-small-2: 29.75em;
+// $bp-small-3: 39.8em;
+// $bp-med: 46.8em;
+// $bp-med-2: 48em;
+// $bp-large: 50em;
+// $bp-large-2: 54.5em;
+// $bp-xl: 60em;
+// $bp-xl-2: 67em;
+
+// .indexpage , .bandpage , .tourpage , .videospage for specific HTML pages /// 
+
+
+// @media all and (min-width: 50em) {
+
+// };
+
+// @media screen and (max-width: 700px) {
+//     .albumtext {
+//         color: blue;
+//     }
+// }
+
+
+// DESKTOP DISPLAY //////
+
+
+// /////////////////////////////////////////////////////////////////
+// MOBILE DESIGN //////
+@media (max-width : 900px) {
+    body {
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-size: 100%;
+        background-position: center top;
+        background-color: rgb(0, 0, 0);
+    }
+
+    ;
+
+    // INDEX PAGE START ///
+    #main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            'navbar'
+            'logo'
+            'music'
+            'overlay';
+    }
+
+    ;
+
+    #navbar {
+        grid-area: navbar;
+        // border: red solid 2px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ;
+
+    #navbar a {
+        text-decoration: none;
+        color: purple;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    ;
+
+    #navbar ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ;
+
+    #navbar li {
+        background-color: rgb(0, 107, 139);
+        border: black solid 2px;
+        display: block;
+        padding: 1em;
+    }
+
+    ;
+
+    #navbar a:hover {
+        color: rgb(0, 107, 139);
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    ;
+
+    .logo {
+        grid-area: logo;
+        width: 100%;
+        align-content: center;
+        // border: red solid 2px;
+    }
+
+    ;
+
+    #overlay {
+        background-color: rgb(0, 107, 139);
+        // border: rgb(131, 130, 130) solid 2px;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-area: overlay;
+        grid-template-columns: 2% 32% 32% 32% 2%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            '. socialmedia socialmedia socialmedia .'
+            '. bandpic bandpic bandpic .'
+            '. cdcover cdcover cdcover .'
+            ' . albumtext albumtext albumtext .'
+            '. navbar2 navbar2 navbar2 .'
+            '. footer footer footer .';
+    }
+
+    ;
+
+    .socialmedia {
+        // border: red solid 2px;
+        grid-area: socialmedia;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    ;
+
+    .socialmedia a {
+        color: white;
+        padding: 25px;
+        font-size: 10px;
+    }
+
+    ;
+
+    .bandpic {
+        // border: rgb(131, 130, 130) solid 2px;
+        grid-area: bandpic;
+        width: 100%;
+    }
+
+    ;
+
+    .cdcover {
+        // border: rgb(131, 130, 130) solid 2px;
+        grid-area: cdcover;
+        width: 100%;
+    }
+
+    ;
+
+    .albumtext {
+        // border: red solid 2px;
+        grid-area: albumtext;
+        padding-left: 25px;
+        background-color: rgba(0, 0, 0, 0.486);
+        color: white;
+    }
+
+    ;
+
+    #navbar2 {
+        grid-template-areas: navbar2;
+        display: none;
+    }
+
+    ;
+
+    .footer {
+        // border: red solid 2px;
+        grid-area: footer;
+    }
+
+    ;
+
+    .footer p {
+        text-align: center;
+        color: darkgrey;
+    }
+
+    ;
+
+    // INDEX PAGE END //////
+
+    // BAND PAGE START /////
+    #main-container2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            'navbar'
+            'bandheading'
+            'bandpagepic'
+            'overlay2';
+    }
+
+    ;
+
+    #navbar {
+        grid-area: navbar;
+        // border: red solid 2px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ;
+
+    #navbar a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    ;
+
+    #navbar ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ;
+
+    #navbar li {
+        background-color: rgb(0, 107, 139);
+        border: black solid 2px;
+        display: block;
+        padding: 1em;
+    }
+
+    ;
+
+    #navbar a:hover {
+        color: purple;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    ;
+
+    .bandheading {
+        background-color: rgba(0, 107, 139, 0.63);
+        grid-area: bandheading;
+        color: white;
+        text-transform: uppercase;
+        font-size: 3em;
+        text-align: center;
+        padding: 10px;
+        letter-spacing: 3px;
+    }
+
+    ;
+
+    .bandpagepic {
+        grid-area: bandpagepic;
+        width: 100%
+    }
+
+    ;
+
+    #overlay2 {
+        background-color: rgba(0, 107, 139, 0.63);
+        // border: rgb(131, 130, 130) solid 2px;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-area: overlay2;
+        grid-template-columns: 2% 32% 32% 32% 2%;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas:
+            '. socialmedia2 socialmedia2 socialmedia2 .'
+            '. bandinfo bandinfo bandinfo .'
+            '. membersinfo membersinfo membersinfo .'
+            '. . member1info . .'
+            '. member1 member1 member1 .'
+            '. . member2info . .'
+            '. member2 member2 member2 .'
+            '. . member3info . .'
+            '. member3 member3 member3 .'
+            '. . member4info . .'
+            '. member4 member4 member4 .'
+            '. footer footer footer .';
+    }
+
+    ;
+
+    .socialmedia2 {
+        // border: red solid 2px;
+        grid-area: socialmedia2;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    ;
+
+    .socialmedia2 a {
+        color: white;
+        padding: 25px;
+        font-size: 10px;
+    }
+
+    ;
+
+    .bandinfo {
+        grid-area: bandinfo;
+        color: white;
+        padding-top: 15px;
+        border-top: white solid 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ;
+
+    .membersinfo {
+        grid-area: membersinfo;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.445);
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        border-bottom: white solid 2px;
+        padding-bottom: 12px;
+        border-top: white solid 2px;
+        padding-top: 12px;
+    }
+
+    ;
+
+    .member1 {
+        grid-area: member1;
+        width: 100%;
+        padding-top: 5px;
+        border-bottom: black solid 2px;
+    }
+
+    ;
+
+    .member1info {
+        grid-area: member1info;
+        color: white;
+        padding-top: 5px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    ;
+
+    .member2 {
+        grid-area: member2;
+        width: 100%;
+        padding-top: 5px;
+        border-bottom: black solid 2px;
+    }
+
+    ;
+
+    .member2info {
+        grid-area: member2info;
+        color: white;
+        padding-top: 5px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    ;
+
+    .member3 {
+        grid-area: member3;
+        width: 100%;
+        padding-top: 5px;
+        border-bottom: black solid 2px;
+    }
+
+    ;
+
+    .member3info {
+        grid-area: member3info;
+        color: white;
+        padding-top: 5px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    ;
+
+    .member4 {
+        grid-area: member4;
+        width: 100%;
+        padding-top: 5px;
+        border-bottom: black solid 2px;
+    }
+
+    ;
+
+    .member4info {
+        grid-area: member4info;
+        color: white;
+        padding-top: 5px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    ;
+
+    .footer {
+        // border: red solid 2px;
+        grid-area: footer;
+    }
+
+    ;
+
+    .footer p {
+        text-align: center;
+        color: darkgrey;
+    }
+
+    ;
+    // BAND PAGE END //////
+
+    // TOUR PAGE START ////
+    #main-container3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            'navbar'
+            'tourheading'
+            'overlay3';
+    }
+
+    ;
+
+    #navbar {
+        grid-area: navbar;
+        // border: red solid 2px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ;
+
+    #navbar a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    ;
+
+    #navbar ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ;
+
+    #navbar li {
+        background-color: rgb(0, 107, 139);
+        border: black solid 2px;
+        display: block;
+        padding: 1em;
+    }
+
+    ;
+
+    .tourheading {
+        background-color: rgba(0, 107, 139, 0.438);
+        border-bottom: white 2px solid;
+        grid-area: tourheading;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-align: center;
+        padding: 10px;
+        letter-spacing: 3px;
+        border-bottom: white solid 2px;
+    }
+
+    ;
+
+
+    #overlay3 {
+        background-color: rgba(0, 107, 139, 0.438);
+        // border: rgb(131, 130, 130) solid 2px;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-area: overlay3;
+        grid-template-columns: 2% 32% 32% 32% 2%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            '. socialmedia3 socialmedia3 socialmedia3 .'
+            'tourdates tourdates tourdates tourdates tourdates'
+            '. footer footer footer .';
+    }
+
+    ;
+
+    .socialmedia3 {
+        // border: red solid 2px;
+        grid-area: socialmedia3;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    ;
+
+    .socialmedia3 a {
+        color: white;
+        padding: 25px;
+        font-size: 10px;
+    }
+
+    ;
+
+    .tourdates {
+        grid-area: tourdates;
+        color: white;
+        padding: 10px;
+    }
+
+    ;
+
+    .thead {
+        font-size: 1em;
+        border: white 1px solid;
+    }
+
+    ;
+
+    .footer {
+        // border: red solid 2px;
+        grid-area: footer;
+    }
+
+    ;
+
+    .footer p {
+        text-align: center;
+        color: darkgrey;
+    }
+
+    ;
+
+
+    // TOUR PAGE END /////
+
+    // VIDEOS PAGE START ////
+    #main-container4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            'navbar'
+            'vheader'
+            'overlay4';
+    }
+
+    ;
+
+    #navbar {
+        grid-area: navbar;
+        // border: red solid 2px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ;
+
+    #navbar a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    ;
+
+    #navbar ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ;
+
+    #navbar li {
+        background-color: rgb(0, 107, 139);
+        border: black solid 2px;
+        display: block;
+        padding: 1em;
+    }
+
+    ;
+
+    .vheader {
+        background-color: rgba(0, 107, 139, 0.438);
+        grid-area: vheader;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-align: center;
+        padding: 10px;
+        letter-spacing: 3px;
+        border-bottom: white solid 2px;
+    }
+
+    ;
+
+    #overlay4 {
+        background-color: rgba(0, 107, 139, 0.438);
+        // border: rgb(131, 130, 130) solid 2px;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-area: overlay4;
+        grid-template-columns: 2% 32% 32% 32% 2%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            '. socialmedia4 socialmedia4 socialmedia4 .'
+            '. video1 video1 video1  .'
+            '. video2 video2 video2  .'
+            '. video3 video3 video3  .'
+            'footer footer footer footer footer';
+    }
+
+    ;
+
+    .socialmedia4 {
+        // border: red solid 2px;
+        grid-area: socialmedia4;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    ;
+
+    .socialmedia4 a {
+        color: white;
+        padding: 25px;
+        font-size: 10px;
+    }
+
+    ;
+
+    .video1 {
+        grid-area: video1;
+        width: 100%;
+        border-bottom: white solid 2px;
+    }
+
+    ;
+
+    .video2 {
+        grid-area: video2;
+        width: 100%;
+        border-bottom: white solid 2px;
+    }
+
+    ;
+
+    .video3 {
+        grid-area: video3;
+        width: 100%;
+        border-bottom: white solid 2px;
+    }
+
+    ;
+
+    .footer {
+        // border: red solid 2px;
+        grid-area: footer;
+    }
+
+    ;
+
+    .footer p {
+        text-align: center;
+        color: darkgrey;
+    }
+
+    ;
+    // VIDEOS PAGE END ////
+}
+
+;
